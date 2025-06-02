@@ -10,7 +10,7 @@ import {
   } from "@mui/icons-material";
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import CommentCard from './commentCard';
+import CommentCard from './CommentCard';
 import { useDispatch, useSelector } from 'react-redux';
 import { addCommentOnPost, deletePost, likePost, updatePost } from '../actions/Post';
 import { getFollowingPosts, getMyPosts, loadUser } from '../actions/User';

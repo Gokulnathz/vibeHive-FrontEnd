@@ -1,0 +1,85 @@
+.login{
+    height:100%; 
+    background-image: linear-gradient(to right, #fff5bc,#cec1ff);
+    display: flex; 
+     align-items: center;
+     justify-content: center; 
+     padding:2vmax;
+     box-sizing: border-box;
+    
+}
+
+.loginForm{
+    background-color: white;
+    height:75%;
+    width:100%;
+    border-radius: 30px;
+    box-sizing: border-box;
+    padding:2vmax;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin-right: 10%; */
+    /* margin-left: 10%; */
+}
+.loginForm >input{
+    box-sizing: border-box;
+    padding: 1vmax 2vmax;
+    width:80%;
+    border-radius: 40px;
+    border:1px solid #ccc;
+    margin:2vmax;
+    font:100 1.2rem "Roboto", sans-serif;
+    outline: none;
+}
+.loginForm >a{
+    align-items: flex-end;
+    text-decoration: none;
+    color:rgba(0,0,0,0.342);
+    margin:2vmax;
+}
+
+@media screen and (max-width: 768px) {
+    .login {
+        
+        flex-direction: column;
+        padding: 5vmax 2vmax;
+    }
+
+    .loginForm {
+        width: 100%;
+        padding: 3vmax;
+    }
+
+    .loginForm > input {
+        width: 100%;
+        padding: 1.2vmax;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .login {
+        display: flex; 
+        flex-direction: column;
+        padding: 1vmax 1vmax;
+        width: 100%;
+    }
+
+    .loginForm {
+        width: 85%;
+        padding: 10vmax;
+        margin-top: 5%;
+        margin-left: 8%;
+    }
+
+    .loginForm > input {
+        font-size: 0.9rem;
+        padding: 1.2vmax;
+        width:100%;
+    }
+
+    .loginForm > a {
+        font-size: 0.8rem;
+    }
+    
+}

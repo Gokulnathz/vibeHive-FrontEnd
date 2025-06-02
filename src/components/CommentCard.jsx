@@ -2,7 +2,7 @@ import { Button, Typography } from "@mui/material"
 import { Link } from "react-router-dom"
 import { Delete } from "@mui/icons-material";
 
-import './commentCard.css'
+import './CommentCard.css'
 import { useDispatch, useSelector } from "react-redux";
 import { deleteCommentOnPost } from "../actions/Post";
 import { getFollowingPosts, getMyPosts } from "../actions/User";

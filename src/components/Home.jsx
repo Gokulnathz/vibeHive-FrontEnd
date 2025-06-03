@@ -9,7 +9,6 @@ import { Typography } from '@mui/material'
 import PersonIcon from '@mui/icons-material/Person';
 import { toast } from 'react-toastify';
 
-console.log("react api url",import.meta.env.REACT_APP_API_URL);
 
 function Home() {
 

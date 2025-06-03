@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const REACT_APP_API_URL='https://vibehive-backend-ogin.onrender.com'
+const REACT_APP_API_URL='https://vibehive-backend-nelf.onrender.com'
 export const likePost = (id) => async (dispatch) => {
     try {
       dispatch({ type: "likeRequest" });

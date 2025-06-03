@@ -1,12 +1,12 @@
 import axios from "axios";
 
-
+const REACT_APP_API_URL='https://vibehive-backend-ogin.onrender.com'
 export const likePost = (id) => async (dispatch) => {
     try {
       dispatch({ type: "likeRequest" });
 
   
-      const { data } = await axios.get(`${import.meta.env.REACT_APP_API_URL}/post/${id}/like`, { withCredentials: true });
+      const { data } = await axios.get(`${REACT_APP_API_URL}/post/${id}/like`, { withCredentials: true });
   
        console.log("Likes loaded:", data.message);
   
@@ -23,7 +23,7 @@ export const addCommentOnPost = (id,comment) => async (dispatch) => {
       dispatch({ type: "addCommentRequest" });
 
   console.log('id:',id)
-      const { data } = await axios.put(`${import.meta.env.REACT_APP_API_URL}/add/comment/${id}`,{comment},
+      const { data } = await axios.put(`${REACT_APP_API_URL}/add/comment/${id}`,{comment},
          { withCredentials: true });
   
       console.log(" comment loaded:", data.message);
@@ -42,7 +42,7 @@ export const deleteCommentOnPost = (id, commentId) => async (dispatch) => {
       dispatch({ type: "deleteCommentRequest" });
 
   
-      const { data } = await axios.delete(`${import.meta.env.REACT_APP_API_URL}/delete/comment/${id}`,{data:{commentId}, withCredentials: true });
+      const { data } = await axios.delete(`${REACT_APP_API_URL}/delete/comment/${id}`,{data:{commentId}, withCredentials: true });
   
     //   console.log(" omment loaded:", data.message);
   
@@ -63,7 +63,7 @@ export const createNewPost = (caption,image) => async (dispatch) => {
       formData.append('caption', caption);
       formData.append('image', image);
   
-      const { data } = await axios.post(`${import.meta.env.REACT_APP_API_URL}/post/upload`,formData, {
+      const { data } = await axios.post(`${REACT_APP_API_URL}/post/upload`,formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -87,7 +87,7 @@ export const updatePost = (caption,id) => async (dispatch) => {
       console.log(id)
       console.log(caption)
      
-      const { data } = await axios.put(`${import.meta.env.REACT_APP_API_URL}/update/caption/${id}`,{caption}, {
+      const { data } = await axios.put(`${REACT_APP_API_URL}/update/caption/${id}`,{caption}, {
         headers: {
           'Content-Type': 'application/json',
         },
@@ -110,7 +110,7 @@ export const deletePost = (id) => async (dispatch) => {
       
       dispatch({ type: "deletePostRequest" });
       
-      const { data } = await axios.delete(`${import.meta.env.REACT_APP_API_URL}/post/${id}/delete`, {
+      const { data } = await axios.delete(`${REACT_APP_API_URL}/post/${id}/delete`, {
         headers: {
           'Content-Type': 'application/json',
         },

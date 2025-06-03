@@ -7,10 +7,9 @@ import { useDispatch, useSelector } from 'react-redux'
 import Loader from './Loader'
 import { Typography } from '@mui/material'
 import PersonIcon from '@mui/icons-material/Person';
-
-
-
 import { toast } from 'react-toastify';
+
+console.log("react api url",import.meta.env.REACT_APP_API_URL);
 
 function Home() {
 
@@ -24,9 +23,6 @@ function Home() {
 
   const {error:likeError,message}= useSelector(state=>state.like);
   const [showUsers, setShowUsers] = useState(false);
-
-  console.log("Users",users)
-  console.log("Posts",posts)
   
   useEffect(()=>{
    dispatch(getFollowingPosts())

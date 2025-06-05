@@ -133,15 +133,16 @@ function Account() {
           <Typography>{posts?.length}</Typography>
         </div>
          </div>
-        <Button variant="contained" onClick={logoutHandler}>
-          Logout <LockIcon className="lock"/>
-        </Button>
+      
         <Link to="/updateprofile">Edit Profile <EditIcon className="edit"/> </Link>
         <Link to="/updatepassword">Change Password <LockOpenIcon className='passChange'/> </Link>
         <Button
           variant="text"
           style={{ color: "red", margin: "2vmax" }} onClick={deleteProfileHandler} disabled={deleteLoading}>
           Delete My Profile <PersonRemoveIcon className='delAcc'/>
+        </Button>
+          <Button variant="contained" onClick={logoutHandler}>
+          Logout <LockIcon className="lock"/>
         </Button>
         <Dialog
           open={followersToggle}

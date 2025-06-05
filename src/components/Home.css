@@ -46,6 +46,7 @@
   }
 .toggle-btn-wrapper {
   display: none;
+  
 }
 @media screen and (max-width: 600px) {
   .home {
@@ -106,4 +107,13 @@
     cursor: pointer;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   }
+}
+@media screen and (max-width: 400px){
+  .toggle-btn-wrapper{ 
+     top: 3px; 
+    }
+    .toggle-users-btn{
+      width:20px;
+      height: 20px;
+    }
 }

@@ -83,6 +83,7 @@
   border: none;
   z-index: 1001;
   cursor: pointer;
+  color:rgb(82, 113, 255)
 }
   .accountStats {
   display: flex;
@@ -155,9 +156,10 @@
 
   .account {
     grid-template-columns: 1fr; /* only left panel shown initially */
-  }
-  
+  }  
+
 }
+
   @media screen and (max-width: 600px){
     .hamburger {
     display: block;

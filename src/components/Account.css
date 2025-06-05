@@ -99,7 +99,24 @@
   flex-direction: column;
   align-items: center;
 }
-  
+.lock{
+    padding-left: 5px;
+  }
+
+.edit{
+    padding-left: 5px;
+    padding-bottom: 4px;
+  }
+
+  .passChange{
+    padding-left: 5px;
+  }
+
+  .delAcc{
+    padding-left: 5px;
+    padding-bottom: 4px;
+  }
+
   @media screen and (max-width: 900px) {
     .account {
       grid-template-columns: 2fr 1fr;
@@ -116,7 +133,7 @@
     }
      .hamburger {
     display: block;
-    top:2rem;
+    top:2.1rem;
   }
 
   .accountright {
@@ -139,5 +156,23 @@
   .account {
     grid-template-columns: 1fr; /* only left panel shown initially */
   }
-  }
   
+}
+  @media screen and (max-width: 600px){
+    .hamburger {
+    display: block;
+    top:3.5rem;
+  }
+  }
+  @media screen and (max-width: 500px){
+    .hamburger {
+    display: block;
+    top:3rem;
+  }
+  }
+  @media screen and (max-width: 450px){
+    .hamburger {
+    display: block;
+    top:2.5rem;
+  }
+  }

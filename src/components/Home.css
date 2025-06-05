@@ -2,9 +2,7 @@
   box-sizing: border-box;
   display: grid;
   grid-template-columns: 1fr 400px;
-  grid-template-rows: auto 1fr;
-  height: 100vh;
-   
+  height: 100vh;  
 }
   
   .homeleft {
@@ -16,6 +14,7 @@
     align-items: center;
     padding: 2vmax;
     box-sizing: border-box;
+
   }
   .scrollable-div::-webkit-scrollbar {
     width: 0; 
@@ -84,7 +83,7 @@
 
  .toggle-btn-wrapper {
     position: absolute; /* change from sticky */
-    top: 1px;           /* small offset from top */
+    top: 10px;           /* small offset from top */
     right: 12px;        /* align right */
     z-index: 1001;
     background: transparent;

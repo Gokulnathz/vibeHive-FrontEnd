@@ -1,8 +1,12 @@
 import { Avatar, Button, Dialog, Typography } from '@mui/material'
 import './Account.css'
 import Post from './Post'
+import LockIcon from '@mui/icons-material/Lock';
+import EditIcon from '@mui/icons-material/Edit';
+import LockOpenIcon from '@mui/icons-material/LockOpen';
+import PersonRemoveIcon from '@mui/icons-material/PersonRemove';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import User from './User';
 import { useDispatch, useSelector } from 'react-redux';
@@ -130,14 +134,14 @@ function Account() {
         </div>
          </div>
         <Button variant="contained" onClick={logoutHandler}>
-          Logout
+          Logout <LockIcon className="lock"/>
         </Button>
-        <Link to="/updateprofile">Edit Profile</Link>
-        <Link to="/updatepassword">Change Password</Link>
+        <Link to="/updateprofile">Edit Profile <EditIcon className="edit"/> </Link>
+        <Link to="/updatepassword">Change Password <LockOpenIcon className='passChange'/> </Link>
         <Button
           variant="text"
           style={{ color: "red", margin: "2vmax" }} onClick={deleteProfileHandler} disabled={deleteLoading}>
-          Delete My Profile
+          Delete My Profile <PersonRemoveIcon className='delAcc'/>
         </Button>
         <Dialog
           open={followersToggle}
@@ -180,11 +184,8 @@ function Account() {
           </div>
         </Dialog>
              </div>
-             
           </div>
-       
         </div>
-    
       )
     }
     </>

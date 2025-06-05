@@ -27,10 +27,9 @@ function Login() {
       toast.success("Login Success");
       navigate('/');
     }
-    else{
-      toast.error("Please Login")
-    }
+    
     if (loginError) {
+      toast(loginError.message)
       console.log(loginError.message);
       dispatch({ type: "clearErrors" });
     }
